@@ -3,10 +3,8 @@
   padding-bottom: 64px;
 }
 
-.maxWidthWrapper {
-}
-
 .header {
+  width: 65%;
   padding-bottom: 64px;
 }
 
@@ -24,7 +22,35 @@
 }
 
 .characterWrapper {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  top: 25%;
+  min-height: 500px;
+  width: 400px;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+@media(max-width: 640px) {
+  .characterEditor {
+    padding-top: 64px;
+    height: 100%;
+  }
+  .header {
+    display: none;
+  }
+  .controlColumn {
+    display: flex; 
+    gap: 16px;
+    width: initial;
+    overflow-x: scroll;
+  }
+  .maxWidthWrapper {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+  }
 }
